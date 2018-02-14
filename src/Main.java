@@ -12,11 +12,15 @@ public class Main {
 		
 		System.out.println("Genesis block hash: "+ genesisBlock.getBlockHash());
 		
-		String[] transactions = {"jana sent krishna 10 bitcoins"};
-		Block block1 = new Block(genesisBlock.getBlockHash(), transactions);
+		String[] block1Transactions = {"jana sent krishna 10 bitcoins"};
+		Block block1 = new Block(genesisBlock.getBlockHash(), block1Transactions);
 		
 		System.out.println("Block1 hash: "+ block1.getBlockHash());
 		
+		String[] block2Transactions = {"jana sent krishna 10 bitcoins"};
+		Block block2 = new Block(block1.getBlockHash(), block2Transactions);
+		
+		System.out.println("Block2 hash: "+ block2.getBlockHash());
 
 	}
 
